@@ -1,0 +1,2963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".activities.RespondenActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".MainActivity">
+        <!--=====================================================================================================================-->
+        <TextView
+            android:id="@+id/title"
+            android:text="Hai Selamat Datang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--======================================================================================================================-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:drawableLeft="@drawable/user"
+                android:id="@+id/etnama_responden"
+                android:hint="nama responden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <!--=========================================================================================================================-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:drawableLeft="@drawable/home"
+                android:id="@+id/etalamat"
+                android:hint="alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <!--==============================================================================================================================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Provinsi : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvprovinsi"
+                android:text="Riau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--=============================================================================================================================-->
+        <Spinner
+            android:paddingTop="10dp"
+            android:id="@+id/spinnerkabkota"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <!--===========================================================================================================================-->
+        <Spinner
+            android:paddingTop="10dp"
+            android:id="@+id/spinnerkecamatan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <!--===============================================================================================================================-->
+        <Spinner
+            android:paddingTop="10dp"
+            android:id="@+id/spinnerkelurahan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <!--=================================================================================================================================-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:drawableLeft="@drawable/home"
+                    android:id="@+id/etrt"
+                    android:hint="rt"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:paddingTop="20dp"
+                android:text="  /  "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:drawableLeft="@drawable/home"
+                    android:id="@+id/etrw"
+                    android:hint="rw"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <!--===========================================================================================================================-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:drawableLeft="@drawable/phone"
+                android:id="@+id/etno_hp"
+                android:hint="no hp"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <!--============================================================================================================================-->
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="20sp"
+            android:layout_margin="1dp"
+            android:text="BAGIAN PENYARINGAN RESPONDEN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--==============================================================================================================================-->
+        <!-- Radio Button Pertanyaan 12 = Apakah Bpk/Ibu/Sdr sudah terdaftar di DPT untuk Pemilu bulan April 2019 ? -->
+        <TextView
+            android:text="12. Apakah Bpk/Ibu/Sdr sudah terdaftar di DPT untuk Pemilu bulan April 2019 ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/radio_group_pertanyaan_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radiobutton_pertanyaan_12_ya"
+                android:text="Ya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/radiobutton_pertanyaan_12_tidak"
+                android:text="Tidak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Belum Tahu"
+                android:id="@+id/radiobutton_pertanyaan_12_belum_tahu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <!--END Radio Button Pertanyaan 12 = Apakah Bpk/Ibu/Sdr sudah terdaftar di DPT untuk Pemilu bulan April 2019 ? -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!-- Radio Button Pertanyaan 13 = Apakah Bpk/Ibu/Sdr sudah terdaftar di DPT untuk Pemilu bulan April 2019 ? -->
+        <TextView
+            android:text="13. Apakah Bpk/Ibu/Sdr akan gunakan hak pilih pada pemilu April 2019?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/radio_group_pertanyaan_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radiobutton_pertanyaan_13_ya"
+                android:text="Ya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/radiobutton_pertanyaan_13_ragu"
+                android:text="Ragu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Tidak"
+                android:id="@+id/radiobutton_pertanyaan_13_tidak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <!--END Radio Button Pertanyaan 13 = Apakah Bpk/Ibu/Sdr akan gunakan hak pilih pada pemilu April 2019? -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="20sp"
+            android:text="BAGIAN IDENTITAS DAN KAREKTERISTIK RESPONDEN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--===================================Radio Button Jenis Kelamin=================================================================-->
+        <TextView
+            android:text="14. Jenis Kelamin : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/radio_group_pertanyaan_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radiobutton_laki-laki"
+                android:text="Laki-Laki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Perempuan"
+                android:id="@+id/radiobutton_perempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <!--======================================End Radio Button Jenis Kelamin==========================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--=====================================Spinner Pertanyaan 15 usia ?============================================================-->
+        <TextView
+            android:text="15. Usia :  ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_15">
+        </Spinner>
+        <!--========================================END Spinner Pertanyaan 15 usia ?=========================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--====================================== Spinner Pertanyaan 16 Agama ? =============================================================-->
+        <TextView
+            android:text="16. Agama : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_16">
+        </Spinner>
+        <!-- ======================================= END Spinner Pertanyaan 16 agama ? =========================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--========================= Spinner Pertanyaan 17 Bila Islam, apakah Bpk/Ibu/Sdr shalat 5 waktu? ? ====================================-->
+        <TextView
+            android:text="17. Bila Islam, apakah Bpk/Ibu/Sdr shalat 5 waktu ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_17">
+        </Spinner>
+        <!--======================== END Spinner Pertanyaan 17 Bila Islam, apakah Bpk/Ibu/Sdr shalat 5 waktu? ===================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--========================= Spinner Pertanyaan 18 Apakah Bpk/Ibu/Sdr suka mengikuti pengajian rutin? =================================-->
+        <TextView
+            android:text="18. Apakah Bpk/Ibu/Sdr suka mengikuti pengajian rutin ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_18">
+        </Spinner>
+        <!--========================== END Spinner Pertanyaan 18 Apakah Bpk/Ibu/Sdr suka mengikuti pengajian rutin ? ============================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--========================================== Spinner Pertanyaan 19 Pendidikan : ===================================================-->
+        <TextView
+            android:text="19.Pendidikan :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_19">
+        </Spinner>
+        <!--========================================= END Spinner Pertanyaan 19 pendidikan : ==================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--================================================= Spinner Pertanyaan 20 Suku : =====================================================-->
+        <TextView
+            android:text="20. Suku :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_20">
+        </Spinner>
+        <!--=============================================== END Spinner Pertanyaan 20 Suku : =====================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--======================================= Spinner Pertanyaan 21 Pekerjaan Utama : ==================================================-->
+        <TextView
+            android:text="21. Pekerjaan Utama :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_21">
+        </Spinner>
+        <!--====================================== END Spinner Pertanyaan 21 Pekerjaan Utama : ===============================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--================================= Spinner Pertanyaan 22 Keanggotaan dalam organisasi utama: ======================================-->
+        <TextView
+            android:text="22.Ketokohan di masyarakat :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_22">
+        </Spinner>
+        <!--=============================== END Spinner Pertanyaan 22 Keanggotaan dalam organisasi utama : ===================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--===============================================  Pertanyaan 23 Kelas pendapatan : ================================================-->
+        <TextView
+            android:text="23. Kelas pendapatan : "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_23">
+        </Spinner>
+        <!--============================================== END Spinner Pertanyaan 23 Kelas pendapatan : ==========================================-->
+        <!--========================================================================================================================-->
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="20sp"
+            android:text="Bagian Aksesibilitas Terhadap Informasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--========================================================================================================================-->
+        <!--========================================== Pertanyaan 24 =================================================================-->
+        <LinearLayout
+            android:paddingBottom="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="24. Dari mana saja Bpk/Ibu/Sdr mendapatkan informasi politik dan seputar Pemilu ?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="1. Media online"
+                    android:id="@+id/tvpertanyaan_24_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="2.Media sosial"
+                    android:id="@+id/tvpertanyaan_24_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="3. Televisi"
+                    android:id="@+id/tvpertanyaan_24_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="4. Radio"
+                    android:id="@+id/tvpertanyaan_24_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="5. Koran"
+                    android:id="@+id/tvpertanyaan_24_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="6. Dari obrolan dengan teman/kolega"
+                    android:id="@+id/tvpertanyaan_24_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:layout_weight="0.2"
+                    android:text="7. Dari atribut pemilu (baligo, spanduk, poster, brosur, dll)"
+                    android:id="@+id/tvpertanyaan_24_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="0.2"
+                    android:id="@+id/spinner_pertanyaan_24_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_pertanyaan_24">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+        <!--========================================= ENDPertanyaan 24 ================================================================-->
+        <!--========================================================================================================================-->
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="16sp"
+            android:text="Bagian Polularitas dan Elektabilitas Terhadap Partai Politik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--========================================================================================================================-->
+        <!--====================================Pertanyaan 25 =================================================================== -->
+        <TextView
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:text="25. jumlah partai peserta pemilu 2019 ada 16 partai Partai apa saja yang paling Bpk/Ibu/Sdr kenal?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="PKB"
+                android:id="@+id/cbpertanyaan_25_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Gerindra"
+                android:id="@+id/cbpertanyaan_25_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PDI Perjuangan"
+                android:id="@+id/cbpertanyaan_25_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Golkar"
+                android:id="@+id/cbpertanyaan_25_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Nasdem"
+                android:id="@+id/cbpertanyaan_25_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Garuda"
+                android:id="@+id/cbpertanyaan_25_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Berkarya"
+                android:id="@+id/cbpertanyaan_25_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PKS"
+                android:id="@+id/cbpertanyaan_25_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Perindo"
+                android:id="@+id/cbpertanyaan_25_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="PPP"
+                android:id="@+id/cbpertanyaan_25_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PSI"
+                android:id="@+id/cbpertanyaan_25_11"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PAN"
+                android:id="@+id/cbpertanyaan_25_12"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Hanura"
+                android:id="@+id/cbpertanyaan_25_13"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Demokrat"
+                android:id="@+id/cbpertanyaan_25_14"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PBB"
+                android:id="@+id/cbpertanyaan_25_15"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PKB Indonesia"
+                android:id="@+id/cbpertanyaan_25_16"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--====================================END Pertanyaan 25 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--====================================Pertanyaan 26 =================================================================== -->
+        <TextView
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:text="26. Apakah Bapak Ibu mengenal lambang partai ini? "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="PKB"
+                android:id="@+id/cbpertanyaan_26_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Gerindra"
+                android:id="@+id/cbpertanyaan_26_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PDI Perjuangan"
+                android:id="@+id/cbpertanyaan_26_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Golkar"
+                android:id="@+id/cbpertanyaan_26_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Nasdem"
+                android:id="@+id/cbpertanyaan_26_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Garuda"
+                android:id="@+id/cbpertanyaan_26_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Berkarya"
+                android:id="@+id/cbpertanyaan_26_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PKS"
+                android:id="@+id/cbpertanyaan_26_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Perindo"
+                android:id="@+id/cbpertanyaan_26_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="PPP"
+                android:id="@+id/cbpertanyaan_26_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PSI"
+                android:id="@+id/cbpertanyaan_26_11"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PAN"
+                android:id="@+id/cbpertanyaan_26_12"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Hanura"
+                android:id="@+id/cbpertanyaan_26_13"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Demokrat"
+                android:id="@+id/cbpertanyaan_26_14"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PBB"
+                android:id="@+id/cbpertanyaan_26_15"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PKB Indonesia"
+                android:id="@+id/cbpertanyaan_26_16"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--====================================END Pertanyaan 26 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--====================================Pertanyaan 27 =================================================================== -->
+        <TextView
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:text="27. Dari partai peserta pemilu yang Bpk/Ibu/Sdr kenal ingat, sebutkan 3 partai yang di suka?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="PKB"
+                android:id="@+id/cbpertanyaan_27_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Gerindra"
+                android:id="@+id/cbpertanyaan_27_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PDI Perjuangan"
+                android:id="@+id/cbpertanyaan_27_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Golkar"
+                android:id="@+id/cbpertanyaan_27_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Nasdem"
+                android:id="@+id/cbpertanyaan_27_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Garuda"
+                android:id="@+id/cbpertanyaan_27_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Berkarya"
+                android:id="@+id/cbpertanyaan_27_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PKS"
+                android:id="@+id/cbpertanyaan_27_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Perindo"
+                android:id="@+id/cbpertanyaan_27_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="PPP"
+                android:id="@+id/cbpertanyaan_27_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PSI"
+                android:id="@+id/cbpertanyaan_27_11"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PAN"
+                android:id="@+id/cbpertanyaan_27_12"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Hanura"
+                android:id="@+id/cbpertanyaan_27_13"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Demokrat"
+                android:id="@+id/cbpertanyaan_27_14"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PBB"
+                android:id="@+id/cbpertanyaan_27_15"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PKB Indonesia"
+                android:id="@+id/cbpertanyaan_27_16"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--====================================END Pertanyaan 27 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--====================================Pertanyaan 28 =================================================================== -->
+        <TextView
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:text="28. Partai apa yang pada Pemilu lalu Bpk/Ibu/Sdr pilih?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="PKB"
+                android:id="@+id/cbpertanyaan_28_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Gerindra"
+                android:id="@+id/cbpertanyaan_28_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PDI Perjuangan"
+                android:id="@+id/cbpertanyaan_28_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Golkar"
+                android:id="@+id/cbpertanyaan_28_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Nasdem"
+                android:id="@+id/cbpertanyaan_28_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Garuda"
+                android:id="@+id/cbpertanyaan_28_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Partai Berkarya"
+                android:id="@+id/cbpertanyaan_28_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PKS"
+                android:id="@+id/cbpertanyaan_28_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Perindo"
+                android:id="@+id/cbpertanyaan_28_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="PPP"
+                android:id="@+id/cbpertanyaan_28_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PSI"
+                android:id="@+id/cbpertanyaan_28_11"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai PAN"
+                android:id="@+id/cbpertanyaan_28_12"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Partai Hanura"
+                android:id="@+id/cbpertanyaan_28_13"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Demokrat"
+                android:id="@+id/cbpertanyaan_28_14"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PBB"
+                android:id="@+id/cbpertanyaan_28_15"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="PKB Indonesia"
+                android:id="@+id/cbpertanyaan_28_16"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Tidak Ingat"
+                android:id="@+id/cbpertanyaan_28_17"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--====================================END Pertanyaan 28 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--==================================== Pertanyaan 29 =================================================================== -->
+        <TextView
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:text="29. Partai apa yang pada pemilu datang dipertimbangkan untuk Bpk/Ibu/Sdr pilih ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/radiogroup_pertanyaan_29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="PKB"
+                android:id="@+id/rbpertanyaan_29_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="GERINDA"
+                android:id="@+id/rbpertanyaan_29_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PDI Perjuangan"
+                android:id="@+id/rbpertanyaan_29_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Golkar"
+                android:id="@+id/rbpertanyaan_29_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="NASDEM"
+                android:id="@+id/rbpertanyaan_29_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Partai Garuda"
+                android:id="@+id/rbpertanyaan_29_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Partai Berkaya"
+                android:id="@+id/rbpertanyaan_29_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PKS"
+                android:id="@+id/rbpertanyaan_29_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PERINDO"
+                android:id="@+id/rbpertanyaan_29_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PPP"
+                android:id="@+id/rbpertanyaan_29_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PSI"
+                android:id="@+id/rbpertanyaan_29_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PAN"
+                android:id="@+id/rbpertanyaan_29_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="HANURA"
+                android:id="@+id/rbpertanyaan_29_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="DEMOKRAT"
+                android:id="@+id/rbpertanyaan_29_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PBB"
+                android:id="@+id/rbpertanyaan_29_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="PKP Indonesia"
+                android:id="@+id/rbpertanyaan_29_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Belum menentukan pilihan"
+                android:id="@+id/rbpertanyaan_29_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="Tidak mau menyebutkan pilihan"
+                android:id="@+id/rbpertanyaan_29_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <!--====================================END Pertanyaan 29 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--============================================ Pertanyaan 30 =================================================================== -->
+        <TextView
+            android:text="30. Apa alasannya ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:text="Sudah menjadi bagian dari hidup saya"
+                android:id="@+id/cbpertanyaan_30_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Kedekatan saya dengan pengurus dan para pendukungnya"
+                android:id="@+id/cbpertanyaan_30_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Visi misinya bagus"
+                android:id="@+id/cbpertanyaan_30_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Programnya bagus"
+                android:id="@+id/cbpertanyaan_30_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Calegnya orang yang kami hormati dan bisa dipercaya"
+                android:id="@+id/cbpertanyaan_30_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Orangnya cerdas-cerdas"
+                android:id="@+id/cbpertanyaan_30_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Orangnya merakyat dan bermasyarakat"
+                android:id="@+id/cbpertanyaan_30_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Orangnya jujur-jujur"
+                android:id="@+id/cbpertanyaan_30_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Suka atau pernah membantu"
+                android:id="@+id/cbpertanyaan_30_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pertimbangan agama"
+                android:id="@+id/cbpertanyaan_30_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--============================================ End Pertanyaan 30 =================================================================== -->
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="16sp"
+            android:text="Bagian Popularitas dan Elektabilitas Calon Legislatif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--============================================ Pertanyaan 31 =================================================================== -->
+        <TextView
+            android:text="31. Apakah Bpk/Ibu/Sdr sudah tahu/kenal dengan orang-orang ini ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_weight="0.2"
+            android:text="DPR RI DAPIL RIAU 1"
+            android:id="@+id/tvpertanyaan_31_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- //////////////////////////////////////// partai 1 ///////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 1"
+            android:id="@+id/tvpartai1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_1_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_1_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_1_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_1_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_1_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_1_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_1_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_1_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 1 ///////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 2 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 2"
+            android:id="@+id/tvpartai2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_2_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_2_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_2_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_2_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_2_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_2_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_2_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_2_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 2 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 3 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 3"
+            android:id="@+id/tvpartai3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_3_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_3_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_3_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_3_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_3_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_3_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_3_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_3_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 3 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 4 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 4"
+            android:id="@+id/tvpartai4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_4_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_4_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_4_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_4_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_4_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_4_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_4_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_4_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 4 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 5 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 5"
+            android:id="@+id/tvpartai5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_5_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_5_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_5_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_5_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_5_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_5_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_5_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_5_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 5 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 4 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 6"
+            android:id="@+id/tvpartai6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_6_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_6_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_6_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 6 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 7 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 7"
+            android:id="@+id/tvpartai7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_7_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_7_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_7_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_7_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_7_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_7_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_7_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_7_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 7 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 8 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 8"
+            android:id="@+id/tvpartai8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_8_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_8_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_8_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_8_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_8_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_8_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_8_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_8_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 8 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 9 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 9"
+            android:id="@+id/tvpartai9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_9_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_9_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_9_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_9_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_9_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_9_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_9_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_9_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 9 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 10 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 10"
+            android:id="@+id/tvpartai10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_10_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_10_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_10_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_10_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_10_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_10_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_10_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_10_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 10 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 11 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 11"
+            android:id="@+id/tvpartai11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_11_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_11_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_11_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_11_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_11_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_11_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_11_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_11_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 11 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 12 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 12"
+            android:id="@+id/tvpartai12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_12_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_12_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_12_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_12_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_12_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_12_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_12_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_12_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 12 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 13 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 13"
+            android:id="@+id/tvpartai13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_13_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_13_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_13_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_13_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_13_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_13_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 13 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 14 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 14"
+            android:id="@+id/tvpartai14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_14_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_14_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_14_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_14_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_14_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_14_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_14_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_14_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 14 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 19 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 19"
+            android:id="@+id/tvpartai19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_19_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_19_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="2"
+                android:id="@+id/cbpertanyaan_31_19_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="3"
+                android:id="@+id/cbpertanyaan_31_19_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="4"
+                android:id="@+id/cbpertanyaan_31_19_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="5"
+                android:id="@+id/cbpertanyaan_31_19_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="6"
+                android:id="@+id/cbpertanyaan_31_19_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="7"
+                android:id="@+id/cbpertanyaan_31_19_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 19 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <!-- //////////////////////////////////////// partai 20 /////////////////////////////////////////////////////////// -->
+        <TextView
+            android:text="Partai 20"
+            android:id="@+id/tvpartai20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Caleg :"
+            android:id="@+id/tvpertanyaan_31_20_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="1"
+                android:id="@+id/cbpertanyaan_31_20_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- //////////////////////////////////////// end partai 20 /////////////////////////////////////////////////////////// -->
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+
+        <!--============================================ End Pertanyaan 31 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--============================================ Pertanyaan 32 =================================================================== -->
+        <TextView
+            android:text="32. Melalui apa Bpk/Ibu/Sdr mengenalnya?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="Alat sosialisasi"
+                android:id="@+id/cbpertanyaan_32_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pertemuan langsung"
+                android:id="@+id/cbpertanyaan_32_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Info dari keluarga"
+                android:id="@+id/cbpertanyaan_32_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="Info dari teman/tetangga"
+                android:id="@+id/cbpertanyaan_32_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Info dari media/cetak"
+                android:id="@+id/cbpertanyaan_32_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:text="Media Online"
+                android:id="@+id/cbpertanyaan_32_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Lainnya"
+                android:id="@+id/cbpertanyaan_32_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--============================================ End Pertanyaan 32 =================================================================== -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--=========================================== Pertanyaan 33 ==============================================================-->
+        <TextView
+            android:text="33. Bila diadakan pemilihan saat ini Bpk/Ibu/Sdr akan memilih siapa ? (Tunjukan calon DPR RI, DPRD Provinsi, DPRD Kab/Kota dan DPD)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_weight="0.2"
+            android:text="DPR RI "
+            android:id="@+id/tvpertanyaan_33_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Partai"
+                android:id="@+id/tvpertanyaan_33_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33_1"/>
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Caleg"
+                android:id="@+id/tvpertanyaan_33_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33_1_2"/>
+        </LinearLayout>
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_weight="0.2"
+            android:text="DPR Provinsi"
+            android:id="@+id/tvpertanyaan_33_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Partai"
+                android:id="@+id/tvpertanyaan_33_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33"/>
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Caleg"
+                android:id="@+id/tvpertanyaan_33_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33_2_2"/>
+        </LinearLayout>
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_weight="0.2"
+            android:text="DPRD KabKota"
+            android:id="@+id/tvpertanyaan_33_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Partai"
+                android:id="@+id/tvpertanyaan_33_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33"/>
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Caleg"
+                android:id="@+id/tvpertanyaan_33_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33_1_2"/>
+        </LinearLayout>
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#8A8787"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_weight="0.2"
+            android:text="DPD"
+            android:id="@+id/tvpertanyaan_33_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_weight="0.3"
+                android:text="No Urut Caleg"
+                android:id="@+id/tvpertanyaan_33_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_weight="0.3"
+                android:id="@+id/spinner_pertanyaan_33_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_pertanyaan_33_4"/>
+        </LinearLayout>
+
+        <!--=========================================== END Pertanyaan 33 ==============================================================-->
+        <!--========================================================================================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="16sp"
+            android:text="Bagian Isu dan Permasalahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--========================================================================================================================-->
+        <!--=========================================== Pertanyaan 34 ==============================================================-->
+        <TextView
+            android:text="34. Permasalahan atau isu apa yang paling menarik perhatian Bpk/Ibu/Sdr di tingkat provinsi dan kabupaten/kota ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:text="Kondisi ekonomi yang semakin sulit"
+                android:id="@+id/cbpertanyaan_34_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Sulitnya lapangan kerja"
+                android:id="@+id/cbpertanyaan_34_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Kerusakan lingkungan"
+                android:id="@+id/cbpertanyaan_34_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Tingginya biaya pendidikan"
+                android:id="@+id/cbpertanyaan_34_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Tingginya biaya kesehatan"
+                android:id="@+id/cbpertanyaan_34_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Harga-harga semakin mahal"
+                android:id="@+id/cbpertanyaan_34_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Korupsi"
+                android:id="@+id/cbpertanyaan_34_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Masalah kriminalitas"
+                android:id="@+id/cbpertanyaan_34_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--=========================================== END Pertanyaan 34 ==============================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--=========================================== Pertanyaan 35 ==============================================================-->
+        <TextView
+            android:text="35. Permasalahan atau isu apa yang paling menarik perhatian Bpk/Ibu/Sdr di tingkat RT tempat Bpk/Ibu/Sdr tinggal ? "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:text="Kerusakan lingkungan"
+                android:id="@+id/cbpertanyaan_35_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Bencana alam"
+                android:id="@+id/cbpertanyaan_35_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Kebakaran hutan dan lahan"
+                android:id="@+id/cbpertanyaan_35_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Serangan hama pertanian"
+                android:id="@+id/cbpertanyaan_35_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Masalah pencurian"
+                android:id="@+id/cbpertanyaan_35_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Miras/narkoba"
+                android:id="@+id/cbpertanyaan_35_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Kenakalan remaja"
+                android:id="@+id/cbpertanyaan_35_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Premanisme"
+                android:id="@+id/cbpertanyaan_35_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--=========================================== END Pertanyaan 35 ==============================================================-->
+
+        <!--========================================================================================================================-->
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="16sp"
+            android:text="Bagian Preferensi Terhadap Caleg dan Metode Sosialisasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--========================================================================================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--=========================================== Pertanyaan 36 ==============================================================-->
+        <TextView
+            android:text="36. Alasan Bpk/Ibu/Sdr memilih caleg ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:text="Satu partai dengan partai pilihan saya"
+                android:id="@+id/cbpertanyaan_36_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Satu agama"
+                android:id="@+id/cbpertanyaan_36_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Satu suku"
+                android:id="@+id/cbpertanyaan_36_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Satu daerah"
+                android:id="@+id/cbpertanyaan_36_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pendidikannya bagus"
+                android:id="@+id/cbpertanyaan_36_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Orangnya simpatik"
+                android:id="@+id/cbpertanyaan_36_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Kepemimpinannya bagus"
+                android:id="@+id/cbpertanyaan_36_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Orangnya cerdas"
+                android:id="@+id/cbpertanyaan_36_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Orangnya jujur"
+                android:id="@+id/cbpertanyaan_36_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Kepemimpinannya prospektif dan berani"
+                android:id="@+id/cbpertanyaan_36_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Visi misinya bagus"
+                android:id="@+id/cbpertanyaan_36_11"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Programnya bagus"
+                android:id="@+id/cbpertanyaan_36_12"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--=========================================== End Pertanyaan 36 ===============================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--=========================================== Pertanyaan 37 ===============================================================-->
+        <TextView
+            android:text="37. Bentuk pendekatan atau kampanye bagaimana yang Bpk/Ibu/Sdr sukai dari para Caleg?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:text="Suka kunjungan/sillaturrahim"
+                android:id="@+id/cbpertanyaan_37_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Ceramah"
+                android:id="@+id/cbpertanyaan_37_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Menyampaikan komitmen untuk memajukan daerah dan nasional"
+                android:id="@+id/cbpertanyaan_37_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Bersedia menerima aspirasi kami dan menyampaikan komitmen untuk memperjuangkannya"
+                android:id="@+id/cbpertanyaan_37_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Memberikan bantuan langsung"
+                android:id="@+id/cbpertanyaan_37_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Lainnya"
+                android:id="@+id/cbpertanyaan_37_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--=========================================== End Pertanyaan 37 ===============================================================-->
+        <!--========================================================================================================================-->
+        <TextView
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="16sp"
+            android:text="Bagian PILPRES"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+        <!--========================================================================================================================-->
+        <!--Spinner Pertanyaan 38 Bagaimana penilaian Bpk/Ibu/Sdr terhadap kinerja Presiden Jokowi - JK hingga saat ini ?-->
+        <TextView
+            android:text="38. Bagaimana penilaian Bpk/Ibu/Sdr terhadap kinerja Presiden Jokowi - JK hingga saat ini ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/spinner_pertanyaan_38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_pertanyaan_38">
+        </Spinner>
+        <!--END Spinner Pertanyaan 38 Apakah Bpk/Ibu/Sdr akan gunakan hak pilih Bpk/Ibu/Sdr pada pemilu April 2019 ?-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--END Radio Button Pertanyaan 39 = Siapa yang akan Bpk/Ibu/Sdr pilih dalam pilpres yang akan datang ? -->
+        <TextView
+            android:text="39. Siapa yang akan Bpk/Ibu/Sdr pilih dalam pilpres yang akan datang ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/radio_group_pertanyaan_39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/radiobutton_pertanyaan_39_1"
+                    android:text="Joko Widodo - Makruf Amin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp" />
+                <RadioButton
+                    android:paddingTop="3dp"
+                    android:id="@+id/radiobutton_pertanyaan_39_2"
+                    android:text="Prabowo Subianto - Sandiaga Uno"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+                <RadioButton
+                    android:paddingTop="3dp"
+                    android:id="@+id/radiobutton_pertanyaan_39_3"
+                    android:text="Belum menentukan pilihan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp" />
+                <RadioButton
+                    android:paddingTop="3dp"
+                    android:id="@+id/radiobutton_pertanyaan_39_4"
+                    android:text="tdk mau memberitahukan pilihan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp" />
+
+        </RadioGroup>
+        <!--END Radio Button Pertanyaan 39 = Siapa yang akan Bpk/Ibu/Sdr pilih dalam pilpres yang akan datang ? -->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--=========================================== Pertanyaan 40 ===============================================================-->
+        <TextView
+            android:text="40. Apa alasan Bpk/Ibu/Sdr dalam menentukan pilihan tersebut?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                android:text="Kedekatan saya dengan partai pendukungnya"
+                android:id="@+id/cbpertanyaan_40_1"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pertimbangan agama"
+                android:id="@+id/cbpertanyaan_40_2"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pertimbangam suku"
+                android:id="@+id/cbpertanyaan_40_3"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pilihan orang tua/keluarga"
+                android:id="@+id/cbpertanyaan_40_4"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Rekomendasi orang yang saya hormati"
+                android:id="@+id/cbpertanyaan_40_5"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Hasil perbincangan dengan teman-teman/kolega"
+                android:id="@+id/cbpertanyaan_40_6"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Pengalaman"
+                android:id="@+id/cbpertanyaan_40_7"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Visi misinya bagus"
+                android:id="@+id/cbpertanyaan_40_8"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Programnya bagus"
+                android:id="@+id/cbpertanyaan_40_9"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:text="Lainnya"
+                android:id="@+id/cbpertanyaan_40_10"
+                android:layout_weight="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--=========================================== End Pertanyaan 40 ===============================================================-->
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="#0C0C0C"
+            android:layout_height="2dp"/>
+        <!--================================================= Lat Lang =================================================================-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="0.2"
+                android:text="lat"
+                android:paddingTop="20dp"
+                android:id="@+id/tvlat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="0.2"
+                android:text="lng"
+                android:paddingTop="20dp"
+                android:id="@+id/tvlang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!--================================================= END Lat Lang =================================================================-->
+        <Button
+            android:background="@color/teal"
+            android:text="SUBMIT"
+            android:id="@+id/btnsubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

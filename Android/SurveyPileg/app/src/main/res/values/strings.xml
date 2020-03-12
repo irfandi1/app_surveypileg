@@ -1,0 +1,394 @@
+<resources>
+    <string name="app_name">SurveyPileg</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+    <string name="section_format">Page %1$d</string>
+    <string name="msg">mohon terima permission</string>
+    <string name="title_activity_provinsi">ProvinsiActivity</string>
+
+    <string-array name="array_pertanyaan_15">
+        <item>17 - 20 Tahun</item>
+        <item>21 - 30 Tahun</item>
+        <item>31 - 40 Tahun</item>
+        <item>40 - 50 Tahun</item>
+        <item>50 Tahun ke atas</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_16">
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>Konghucu</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_17">
+        <item>Rajin</item>
+        <item>Belum Lengkap</item>
+        <item>Jarang</item>
+        <item>Sangat Jarang</item>
+        <item>Tidak Islam</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_18">
+        <item>Rajin</item>
+        <item>Kadang-kadang</item>
+        <item>Sangat Jarang</item>
+        <item>Tidak pernah</item>
+        <item>Tidak Islam</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_19">
+        <item>Tdk Tamat SD</item>
+        <item>SD</item>
+        <item>SLP / SMP</item>
+        <item>SLA / SMA</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_20">
+        <item>Melayu</item>
+        <item>Jawa</item>
+        <item>Minang</item>
+        <item>Batak</item>
+        <item>Bugis</item>
+        <item>Banjar</item>
+        <item>Sunda</item>
+        <item>Nias</item>
+        <item>Aceh</item>
+        <item>Timor</item>
+        <item>Cina</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_21">
+        <item>Petani (termasuk peternakan,budidaya ikan)</item>
+        <item>Pedagang</item>
+        <item>Nelayan</item>
+        <item>Buruh(tani,bangunan,dll)</item>
+        <item>PNS</item>
+        <item>Pegawai Swasta</item>
+        <item>Wirausaha</item>
+        <item>Pensiunan PNS/TNI/POLRI</item>
+        <item>Pensiunan Pegawai Swasta</item>
+        <item>Aparat Desa(non PNS)</item>
+        <item>Honorer</item>
+        <item>Mahasiswa</item>
+        <item>Pelajar</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_22">
+        <item>Tokoh agama</item>
+        <item>Tokoh adat</item>
+        <item>Tokoh cendikiawan </item>
+        <item>Tokoh pemuda</item>
+        <item>Tokoh perempuan</item>
+        <item>Tokoh informal(berpengaruh secara personal)</item>
+        <item>Anggota masyarakat biasa</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_23">
+        <item>Rp. 2 Juta Ke Bawah</item>
+        <item>Rp. 2-4 Juta</item>
+        <item>Rp. 4-8 Juta</item>
+        <item>Rp. 8 Juta ke Atas</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_24">
+        <item>Sering</item>
+        <item>Sedang</item>
+        <item>Jarang/Tidak Pernah</item>
+    </string-array>
+
+    <!--coment-->
+    <string-array name="array_pertanyaan_25">
+        <item>Tokoh agama</item>
+        <item>Tokoh adat</item>
+        <item>Tokoh cendikiawan </item>
+        <item>Tokoh pemuda</item>
+        <item>Tokoh perempuan</item>
+        <item>Tokoh informal(berpengaruh secara personal)</item>
+        <item>Anggota masyarakat biasa</item>
+    </string-array>
+    <!--END coment-->
+
+    <string-array name="array_pertanyaan_26">
+        <item>Tahu</item>
+        <item>Kurang tahu</item>
+        <item>Tidak tahu</item>
+    </string-array>
+
+    <!--coment-->
+    <string-array name="array_pertanyaan_27">
+        <item>Rp. 2 Juta Ke Bawah</item>
+        <item>Rp. 2-4 Juta</item>
+        <item>Rp. 4-8 Juta</item>
+        <item>Rp. 8 Juta ke Atas</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_28">
+        <item>Sering</item>
+        <item>Sedang</item>
+        <item>Jarang</item>
+        <item>Sangat Jarang</item>
+        <item>Tidak Pernah</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_29">
+        <item>Tahu</item>
+        <item>Ragu-ragu</item>
+        <item>Belum Tahu</item>
+    </string-array>
+    <!--End Comment-->
+
+
+    <string-array name="array_pertanyaan_33">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>19</item>
+        <item>20</item>
+        <item>Belum Menentukan Pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_33_1">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>19</item>
+        <item>20</item>
+        <item>Belum Menentukan Pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_33_1_2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>Belum Menentukan Pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_33_2_2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>Belum Menentukan Pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_33_4">
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>Belum Menentukan Pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_38">
+        <item>Sangat Puas</item>
+        <item>Puas</item>
+        <item>Tidak Puas</item>
+        <item>Tidak mau memberikan penilaian</item>
+    </string-array>
+<!--comment-->
+    <string-array name="array_pertanyaan_39">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_40">
+        <item>Mayoritas sudah tahu</item>
+        <item>Tahu sebagian</item>
+        <item>Tahu Sedikit</item>
+        <item>Belum Tahu</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_41">
+        <item>Sudah</item>
+        <item>Belum</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_43">
+        <item>Sudah Lama</item>
+        <item>Baru-Baru ini</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_44">
+        <item>Alat sosialisasi</item>
+        <item>Pertemuan langsung</item>
+        <item>Info dari keluarga (Orang tua, saudara, suami/istri/anak)</item>
+        <item>Info dari teman</item>
+        <item>Info dari media (TV, Koran, dsb)</item>
+        <item>Info dari tetangga</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_45_1">
+        <item>1. ......</item>
+        <item>2. .....</item>
+        <item>4. .......</item>
+        <item>5. .....</item>
+        <item>6. .....</item>
+        <item>7. .....</item>
+        <item>20. Belum menentukan pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_45_2">
+        <item>1. ......</item>
+        <item>2. .....</item>
+        <item>4. .......</item>
+        <item>5. .....</item>
+        <item>6. .....</item>
+        <item>7. .....</item>
+        <item>20. Belum menentukan pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_45_3">
+        <item>1. ......</item>
+        <item>2. .....</item>
+        <item>4. .......</item>
+        <item>5. .....</item>
+        <item>6. .....</item>
+        <item>7. .....</item>
+        <item>20. Belum menentukan pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_45_4">
+        <item>1. ......</item>
+        <item>2. .....</item>
+        <item>4. .......</item>
+        <item>5. .....</item>
+        <item>6. .....</item>
+        <item>7. .....</item>
+        <item>20. Belum menentukan pilihan</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_46">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_52">
+        <item>Satu partai dengan partai pilihan saya</item>
+        <item>Satu agama</item>
+        <item>Satu daerah</item>
+        <item>Pilihan orang tua/keluarga</item>
+        <item>Ada hubungan saudara atau teman</item>
+        <item>Direkomendasi kan orang yang saya hormati</item>
+        <item>Sama dengan pilihan teman-teman/kolega</item>
+        <item>Pendidikannya bagus</item>
+        <item>Orangnya simpatik</item>
+        <item>Kepemimpinannya bagus</item>
+        <item>Orangnya cerdas</item>
+        <item>Orangnya kaya</item>
+        <item>Orangnya gagah dan ganteng</item>
+        <item>Orangnya gaul dan bermasyarakat</item>
+        <item>Orangnya jujur</item>
+        <item>Kepemimpinannya prospektif dan berani </item>
+        <item>Pengalaman bagus</item>
+        <item>Visi misinya bagus</item>
+        <item>Programnya bagus</item>
+        <item>Suka membantu</item>
+        <item>Suka membagi uang/barang</item>
+    </string-array>
+
+
+    <string-array name="array_pertanyaan_53">
+        <item>Suka kunjungan / sillaturrahim</item>
+        <item>Ceramah</item>
+        <item>Menyampaikan komitmen untuk memajukan daerah dan nasional</item>
+        <item>Bersedia menerima aspirasi kami dan menyampaikan komitmen untuk memperjuangkannya </item>
+        <item>Memberikan bantuan langsung</item>
+    </string-array>
+
+    <string-array name="array_pertanyaan_54">
+        <item>Sangat Puas</item>
+        <item>Cukup Puas</item>
+        <item>Biasa Saja</item>
+        <item>Kurang Puas</item>
+        <item>Kecewa</item>
+    </string-array>
+<!--End Commment-->
+    <string name="title_activity_registrasi">RegistrasiActivity</string>
+
+</resources>
